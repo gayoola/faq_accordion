@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Source+Serif+4:wght@200;300;400;500;600;700;800;900&family=Work+Sans:wght@400;600;700&display=swap');
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Lightpink: hsl(275, 100%, 97%);
+    --Grayishpurple: hsl(292, 16%, 49%);
+    --Darkpurple: hsl(292, 42%, 14%);
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+.container {
+    background: url(../assets/images/background-pattern-desktop.svg);
+    background-size: cover;
+    padding: 20px;
+    height: 40vh;
+    max-width: 100%;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.card-container {
+    background-color: #fff;
+    width: 30%;
+    margin: 8rem auto;
+    border-radius: 10px;
+    min-height: 300px;
+    padding: 30px;
+
+    -moz-box-shadow: 0px 5px 30px rgba(68, 68, 68, 0.3);
+    -webkit-box-shadow: 0px 5px 30px rgba(68, 68, 68, 0.3);
+    box-shadow: 0px 5px 30px rgba(68, 68, 68, 0.3);
+}
+
+
+.accordion-wrap .accoridon-header {
+    display: flex;
+    align-items: center;
+    grid-gap: 1rem;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+p {
+    font-size: 12px;
+    color: var(--Darkpurple);
+    opacity: .7;
+}
+
+
+
+
+.accordion-item .accordion-header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 1rem;
+}
+
+.accordion-item .accordion-header-content i.fa-plus {
+    display: none;
+} 
+
+.accordion-item .accordion-header-content i img {
+    width: 20px;
+    
+}
+
+/* active */
+.accordion-item.active .accordion-content p {
+    height: auto;
+}
+
+
+.accordion-item .accordion-content {
+    overflow: hidden;
+}
+
+.accordion-item .accordion-content p {
+    height: 0;
+    /* padding: 0; */
+    margin: 0;
+    transition: all .2s linear;
+}
+
+
+.accordion-item .accordion-header-content h3 {
+    cursor: pointer;
+}
+
+.accordion-item .accordion-header-content h3:hover {
+    color: var(--Grayishpurple);
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .card-container {
+        width: fit-content;
+    }
+  }
